@@ -67,6 +67,11 @@ func Sections(f *pe.File, name string) (*pe.Section){
 	return secs
 }
 
+func Info(f *pe.File) (*pe.FileHeader) {
+	
+
+}
+
 func main(){
     fmt.Println("working")
 }
