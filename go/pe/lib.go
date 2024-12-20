@@ -71,6 +71,21 @@ func Info(f *pe.File) (pe.FileHeader) {
 	return f.FileHeader
 }
 
+// func ImportedDirectory(f *pe.File) (pe.ImportDirectory) {
+// 	return pe.ImportDirectory
+// }
+
+func OptionalHeaders32(f *pe.File) (any){
+	return f.OptionalHeader
+}
+
+func OptionalHeaders64(f *pe.File) (any){
+	return f.OptionalHeader
+}
+
+func FileStruct(f *pe.File) (*pe.File){
+	return f
+}
 
 func main(){
     fmt.Println("working")
