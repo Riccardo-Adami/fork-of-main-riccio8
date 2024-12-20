@@ -67,9 +67,8 @@ func Sections(f *pe.File, name string) (*pe.Section){
 	return secs
 }
 
-func Info(f *pe.File) (*pe.FileHeader) {
-	
-
+func Info(f *pe.File) (pe.FileHeader) {
+	return f.FileHeader
 }
 
 func main(){
