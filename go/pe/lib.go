@@ -48,7 +48,7 @@ func sym(f *pe.File) ([]string, error){
 	otherwise it will return an empty array as first arg and the specific error as second
 	 */
 
-	symblos, err := f.ImportedSymblos()
+	symblos, err := f.ImportedSymbols()
 
 	if err != nil{
 		return nil, err
@@ -57,14 +57,14 @@ func sym(f *pe.File) ([]string, error){
 	return symblos, nil
 }
 
-func Sections(f *pe.Fie, name string) (*pe.Section, error){
+func Sections(f *pe.File, name string) (*pe.Section){
 	 /*
 	function for finding anbd reading the sections of the pe giving a name, like .text.
 	Section returns the first section with the given name, or nil if no such section exists.
 	 */
 
-	secs, err := 
-	
+	secs := f.Section(name)
+	return secs
 }
 
 func main(){
